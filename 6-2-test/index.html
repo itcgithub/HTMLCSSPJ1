@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>FloatとClearfix</title>
+	<style>
+	div, h1, p, dl, dt, dd{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		width: 600px;
+		padding: 10px;
+		border: 2px solid #ccc;
+	}
+	p{
+		margin-top: 0.5em;
+		line-height: 1.5;
+	}
+	dl{
+		margin-top: 1em;
+		border: 1px solid #4BB2A9;
+		border-radius: 6px;
+	}
+	dt{
+		font-weight: bold;
+	}
+	dd{
+		padding-left: 10px;
+	}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="content">
+		<h1>Clearfixとは</h1>
+		<p>便利だけど、使い方が少しややこしいですね。<br>
+		まずは、横並びになった要素の親要素を見つける練習から始めましょう。</p>
+	</div>
+	<dl>
+		<dt><img src="css.png" alt="CSSソース"></dt>
+		<dd><pre>:after{
+content: '';
+display: block;
+clear: both;
+}</pre></dd>
+	</dl>
+</div>
+</body>
+</html>
